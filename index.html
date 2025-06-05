@@ -32,34 +32,33 @@
    </head>
    <body>
       <!--header section start -->
-      <!--header section start -->
       <div class="header_section">
          <div class="container-fluid">
             <div class="row">
                <div class="col-sm-6 col-lg-2">
-                  <span  style="font-size:33px;cursor:pointer; color: #ffffff; margin-left: -77px;" onclick="openNav()"><img src="images/toggle-menu.png" class="toggle_menu"></span>
+                  <span style="font-size:33px;cursor:pointer; color: #ffffff; margin-left: -77px;" onclick="openNav()"><img src="images/toggle-menu.png" class="toggle_menu"></span>
                </div>
                <div class="col-sm-6 col-lg-2">
+                  <button id="langBtn" onclick="toggleLanguage()" style="background: transparent; border: 2px solid white; color: white; padding: 5px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px;">VI</button>
                </div>
                <div class="col-sm-8">
                   <div class="menu_text">
                      <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="gifts.html">Our gifts</a></li>
-                        <li><a href="#footer">Contact Us</a></li>
+                        <li class="active"><a href="index.html" data-lang="home">Home</a></li>
+                        <li><a href="about.html" data-lang="about">About</a></li>
+                        <li><a href="gifts.html" data-lang="ourGifts">Our Gifts</a></li>
+                        <li><a href="#footer" data-lang="contactUs">Contact Us</a></li>
                         <div id="myNav" class="overlay">
                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                            <div class="overlay-content">
-                              <a href="index.html">Home</a>
-                              <a href="about.html">About</a>
-                              <a href="gifts.html">Our gifts</a>
-                              <a href="#footer">Contact Us</a>
+                              <a href="index.html" data-lang="home">Home</a>
+                              <a href="about.html" data-lang="about">About</a>
+                              <a href="gifts.html" data-lang="ourGifts">Our Gifts</a>
+                              <a href="#footer" data-lang="contactUs">Contact Us</a>
                            </div>
                         </div>
+                     </ul>
                   </div>
-                  </li>
-                  </ul>
                </div>
             </div>
          </div>
@@ -74,10 +73,10 @@
                      <div class="row">
                         <div class="col-md-6">
                            <div class="banner_taital">
-                              <h2 class="our_text">Our Best</h2>
-                              <h1 class="gifts_text">Tealight Hug</h1>
-                              <p class="standerd_text">Một set quà nhẹ nhàng cho buổi chiều cuối ngày – giúp thư giãn nhanh chóng mà không cầu kỳ</p>
-                              <div class="red_bt"><a href="#">Read More</a></div>
+                              <h2 class="our_text" data-lang="ourBest">Our Best</h2>
+                              <h1 class="gifts_text" data-lang="tealightHug">Tealight Hug</h1>
+                              <p class="standerd_text" data-lang="tealightDesc">A gentle gift set for late afternoon - helps you relax quickly without being complicated</p>
+                              <div class="red_bt"><a href="#" data-lang="readMore">Read More</a></div>
                            </div>
                         </div>
                         <div class="col-md-6 ram">
@@ -91,10 +90,10 @@
                      <div class="row">
                         <div class="col-md-6">
                            <div class="banner_taital">
-                              <h2 class="our_text">Our Best</h2>
-                              <h1 class="gifts_text">Floral Treat</h1>
-                              <p class="standerd_text">Một combo ngọt ngào và nữ tính – phù hợp làm quà tặng cho bạn gái, sinh nhật, hoặc những dịp tự thương chính mình</p>
-                              <div class="red_bt"><a href="#">Read More</a></div>
+                              <h2 class="our_text" data-lang="ourBest">Our Best</h2>
+                              <h1 class="gifts_text" data-lang="floralTreat">Floral Treat</h1>
+                              <p class="standerd_text" data-lang="floralDesc">A sweet and feminine combo - perfect as a gift for girlfriends, birthdays, or self-care occasions</p>
+                              <div class="red_bt"><a href="#" data-lang="readMore">Read More</a></div>
                            </div>
                         </div>
                         <div class="col-md-6 ram">
@@ -108,10 +107,10 @@
                      <div class="row">
                         <div class="col-md-6">
                            <div class="banner_taital">
-                              <h2 class="our_text">Our Best</h2>
-                              <h1 class="gifts_text">Honey Rose</h1>
-                              <p class="standerd_text">Nến thơm tealight mini cao cấp chillme sáp đậu nành organic decor trang trí nhà cửa và quà tặng</p>
-                              <div class="red_bt"><a href="#">Read More</a></div>
+                              <h2 class="our_text" data-lang="ourBest">Our Best</h2>
+                              <h1 class="gifts_text" data-lang="honeyRose">Honey Rose</h1>
+                              <p class="standerd_text" data-lang="honeyDesc">Premium mini tealight candles chillme organic soybean wax for home decor and gifts</p>
+                              <div class="red_bt"><a href="#" data-lang="readMore">Read More</a></div>
                            </div>
                         </div>
                         <div class="col-md-6 ram">
@@ -139,11 +138,9 @@
                <div class="row">
                   <div class="col-md-6">
                      <div class="about_taital">
-                        <h1 class="about_text">About Us</h1>
-                        <p class="true_text">Chạm vào dịu dàng – chữa lành từng khoảnh khắc.
-                           Mira You mang đến những món quà nhỏ cho tâm hồn: nến thơm, viên tắm, tinh dầu...
-                           Tất cả dành cho những lúc bạn muốn chậm lại, thở sâu và trở về với chính mình.</p>
-                        <div class="redmore_bt"><a href="#">Read More</a></div>
+                        <h1 class="about_text" data-lang="aboutUs">About Us</h1>
+                        <p class="true_text" data-lang="aboutText">Touch into gentleness - healing every moment. Mira You brings small gifts for the soul: scented candles, bath bombs, essential oils... All for when you want to slow down, breathe deeply and return to yourself.</p>
+                        <div class="redmore_bt"><a href="#" data-lang="readMore">Read More</a></div>
                      </div>
                   </div>
                   <div class="col-md-6">
@@ -156,16 +153,16 @@
          <!-- gifts section start -->
          <div class="gifts_section layout_padding">
             <div class="container">
-               <h1 class="ourgifts_text">Our gifts</h1>
-               <p class="lorem_text">Mang đến các combo chăm sóc bản thân, thư giãn tinh thần, giúp khách hàng – đặc biệt là nữ giới và Gen Z – có cảm giác được yêu thương, nâng niu, giải tỏa stress sau ngày dài.</p>
+               <h1 class="ourgifts_text" data-lang="ourGifts">Our Gifts</h1>
+               <p class="lorem_text" data-lang="giftsDesc">Bringing self-care combos, spiritual relaxation, helping customers - especially women and Gen Z - feel loved, cherished, and stress-relieved after a long day.</p>
                <div class="gifts_section_2">
                   <div class="row">
                      <div class="col-md-6">
                         <div class="img_5"><img src="images/img-5.png"></div>
                         <div class="volis_main">
                            <div class="volis_2">
-                              <h1 class="volis_text">Volis  <span style="color: #1cb2d2;">$60</span></h1>
-                              <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majo</p>
+                              <h1 class="volis_text" data-lang="tealightHug">Tealight Hug</h1>
+                              <p class="there_text" data-lang="tealightDesc">A gentle gift set for late afternoon - helps you relax quickly without being complicated</p>
                            </div>
                         </div>
                      </div>
@@ -173,14 +170,14 @@
                         <div class="img_5"><img src="images/img-6.png"></div>
                         <div class="volis_main">
                            <div class="volis_2">
-                              <h1 class="volis_text">Volis  <span style="color: #1cb2d2;">$60</span></h1>
-                              <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majo</p>
+                              <h1 class="volis_text" data-lang="floralTreat">Floral Treat</h1>
+                              <p class="there_text" data-lang="floralDesc">A sweet and feminine combo - perfect as a gift for girlfriends, birthdays, or self-care occasions</p>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="see_bt_main">
-                     <div class="see_bt"><a href="#">See More</a></div>
+                     <div class="see_bt"><a href="#" data-lang="readMore">Read More</a></div>
                   </div>
                </div>
             </div>
@@ -195,10 +192,10 @@
                   </div>
                   <div class="col-md-6">
                      <div class="shop_taital">
-                        <h1 class="shop_text">Our Shop</h1>
-                        <p class="ipsum_text">irst true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore alw</p>
-                        <p class="ipsum_text">irst true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore alw</p>
-                        <div class="red_more_bt"><a href="#">Read More</a></div>
+                        <h1 class="shop_text" data-lang="ourShop">Our Shop</h1>
+                        <p class="ipsum_text" data-lang="shopDesc1">Welcome to our cozy corner where every item is carefully selected to bring warmth and comfort to your space.</p>
+                        <p class="ipsum_text" data-lang="shopDesc2">From aromatic candles to soulful accessories, discover pieces that transform your everyday moments into special occasions.</p>
+                        <div class="red_more_bt"><a href="#" data-lang="readMore">Read More</a></div>
                      </div>
                   </div>
                </div>
@@ -206,9 +203,6 @@
          </div>
          <!-- shop section end -->
       </div>
-      <!-- contact section start -->
-      <!-- Remove entire contact section -->
-      <!-- contact section end -->
       <!-- section footer start -->
       <div class="section_footer" id="footer">
          <div class="container">
@@ -217,32 +211,32 @@
                   <div class="col-sm-6 col-md-6 col-lg-3">
                      <div class="footer_logo"><img src="images/logo.png"></div>
                      <div class="dummy_text"><img src="images/map-icon.png"><span class="address_text">Address : 41, Đường Mục Uyên, Xã Tân Xã, H. Thạch Thất, Hà Nội.</span></div>
-                     <div class="call_text"><img src="images/call-icon.png"><span class="address_text">Phone :  03347061863</span></div>
-                     <div class="call_text"><img src="images/email-icon.png"><span class="address_text">Email : gift@wenro.com</span></div>
+                     <div class="call_text"><img src="images/call-icon.png"><span class="address_text">Phone : 03347061863</span></div>
+                     <div class="call_text"><img src="images/email-icon.png"><span class="address_text">Email : ngnquocuong@gmail.com</span></div>
                      <div class="input-group mb-3">
-                        <input class="email_bt" type="text" placeholder="Enter your email">
+                        <input class="email_bt" type="text" placeholder="Enter your email" data-lang="enterEmail">
                         <div class="input-group-append">
-                           <button class="subscribe_bt" type="Subscribe">Subscribe</button>  
+                           <button class="subscribe_bt" type="Subscribe" data-lang="subscribe">Subscribe</button>
                         </div>
                      </div>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
-                     <h2 class="account_text">My Account</h2>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Checkout</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Account</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Orders</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Credit Slips</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Addresses</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">My Personal Info</span></div>
+                     <h2 class="account_text" data-lang="myAccount">My Account</h2>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="checkout">Checkout</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="myAccount">My Account</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="myOrders">My Orders</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="myCreditSlips">My Credit Slips</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="myAddresses">My Addresses</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="myPersonalInfo">My Personal Info</span></div>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
-                     <h2 class="account_text">Information</h2>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Specials</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">New Products</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Best Sellers</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Our Stores</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Contact Us</span></div>
-                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Secure Payment</span></div>
+                     <h2 class="account_text" data-lang="information">Information</h2>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="specials">Specials</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="newProducts">New Products</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="bestSellers">Best Sellers</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="ourStores">Our Stores</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="contactUs">Contact Us</span></div>
+                     <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text" data-lang="securePayment">Secure Payment</span></div>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
                      <h2 class="adderess_text">Instagram</h2>
@@ -263,7 +257,6 @@
             </div>
          </div>
       </div>
-      </div>
       <!-- section footer end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
@@ -274,33 +267,17 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <script src="js/language.js"></script>
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
       <script>
-         $(document).ready(function(){
-         $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none"
-            });
-            
-            $(".zoom").hover(function(){
-            
-            $(this).addClass('transition');
-            }, function(){
-            
-            $(this).removeClass('transition');
-            });
-            });
-            
-      </script> 
-      <script>
          function openNav() {
-         document.getElementById("myNav").style.width = "100%";
+            document.getElementById("myNav").style.width = "100%";
          }
          
          function closeNav() {
-         document.getElementById("myNav").style.width = "0%";
+            document.getElementById("myNav").style.width = "0%";
          }
       </script>
    </body>
