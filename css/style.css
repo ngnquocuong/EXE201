@@ -856,3 +856,11 @@ button {
     width: 100%;
     float: left;
 }
+
+#contact {
+    scroll-margin-top: 100px; /* Adjust this value based on your header height */
+}
+
+#footer {
+    scroll-margin-top: 100px; /* Adjust this value based on your header height */
+}
