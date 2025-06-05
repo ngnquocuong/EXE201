@@ -93,6 +93,17 @@ function toggleLanguage() {
     currentLang = currentLang === 'vi' ? 'en' : 'vi';
     updateContent();
     document.getElementById('langBtn').textContent = currentLang === 'vi' ? 'EN' : 'VI';
+    
+    // Update font family based on language
+    if (currentLang === 'vi') {
+        document.querySelectorAll('[data-lang]').forEach(element => {
+            element.style.fontFamily = "'Times New Roman', serif";
+        });
+    } else {
+        document.querySelectorAll('[data-lang]').forEach(element => {
+            element.style.fontFamily = ""; // Reset to default font
+        });
+    }
 }
 
 function updateContent() {
